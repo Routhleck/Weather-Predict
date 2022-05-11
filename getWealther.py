@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+
 def get_data(city_name,tim):
     url="http://www.tianqihoubao.com/lishi/"+city_name+"/month/"+tim+".html"
     re=requests.get(url)
@@ -19,7 +20,7 @@ def get_data(city_name,tim):
             res=int(temp1)
         else:
             res=(int(temp1)+int(temp2))/2.0#取平均值
-        #print(tim,temp1,temp2)
+        print(tim,temp1,temp2)
         fp.writelines(str(res)+'\n')
 fp=open('data.txt','w',encoding='utf-8')
 city_name="beijing"
