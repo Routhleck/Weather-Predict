@@ -24,7 +24,7 @@ def get_data(city_name,tim):
         fp.writelines(str(res)+'\n')
 fp=open('data.txt','w',encoding='utf-8')
 city_name="beijing"
-for year in range(2015,2020):#时间从2015年到2019年
+for year in range(2015,2022):#时间从2015年到2019年
     for month in range(1,13):#时间从1月到12月
         tim=str(year)
         if month<10:

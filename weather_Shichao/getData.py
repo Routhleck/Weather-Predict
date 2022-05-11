@@ -23,15 +23,14 @@ def get_data(city_name, tim):
         else:
             res = (int(temp1) + int(temp2)) / 2.0  # 取平均值
         print(tim, temp1, temp2)
-        print(data[0].text.split())
-        print(data[1].text.split())
+        print(data[i].text.split())  # 这里打印读取数据的来源txt型数据输出打印
 
         fp.writelines(str(res) + '\n')
 
 
 fp = open('data.txt', 'w', encoding='utf-8')
 city_name = "beijing"
-for year in range(2017, 2022):  # 时间从2015年到2019年
+for year in range(2017, 2022):  # 时间从2017年到2019年
     for month in range(1, 13):  # 时间从1月到12月
         tim = str(year)
         if month < 10:
