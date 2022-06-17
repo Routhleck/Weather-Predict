@@ -33,12 +33,12 @@ for a in range(1, 7):
     today = DT.datetime.now()
     time = (today + DT.timedelta(days=a)).date()
     print(time.year, '/', time.month, '/', time.day,
-          ': 平均气温',  preds[a][0], '℃',
-          '最高气温', preds[a][1], '℃',
-          '最低气温', preds[a][2], '℃',
-          "降雨量", preds[a][3], "mm",
-          "气压", preds[a][4], 'hPa',
-          "风力", preds[a][5], 'm/s',)
+          ': 平均气温',  preds[a][0], '℃ ',
+          '最高气温', preds[a][1], '℃ ',
+          '最低气温', preds[a][2], '℃ ',
+          "降雨量", preds[a][3], "mm ",
+          "气压", preds[a][4], 'hPa ',
+          "风力", preds[a][5], 'm/s ',)
     all_ave_t.append(preds[a][0])
     all_high_t.append(preds[a][1])
     all_low_t.append(preds[a][2])
