@@ -38,7 +38,7 @@ for a in range(1, 7):
           '最低气温', preds[a][2], '℃ ',
           "降雨量", preds[a][3], "mm ",
           "气压", preds[a][4], 'hPa ',
-          "风力", preds[a][5], 'm/s ',)
+          "风向", preds[a][5], '° ',)
     all_ave_t.append(preds[a][0])
     all_high_t.append(preds[a][1])
     all_low_t.append(preds[a][2])
@@ -46,7 +46,7 @@ for a in range(1, 7):
     all_pressure.append(preds[a][4])
     all_wind.append(preds[a][5])
 
-temp = {"ave_t": all_ave_t, "high_t": all_high_t, "low_t": all_low_t, "rainfall": all_rainfall, "pressure": all_pressure, "wind": all_wind}
+temp = {"ave_t": all_ave_t, "high_t": all_high_t, "low_t": all_low_t, "rainfall": all_rainfall, "pressure": all_pressure}
 # 绘画折线图
 plt.plot(range(1, 7), temp["ave_t"], color="green", label="ave_t")
 plt.plot(range(1, 7), temp["high_t"], color="red", label="high_t")
@@ -65,11 +65,5 @@ plt.show()
 plt.plot(range(1, 7), temp["pressure"], color="black", label="pressure")
 plt.legend()
 plt.ylabel("hPa")
-plt.xlabel("day")
-plt.show()
-#风力显示
-plt.plot(range(1, 7), temp["wind"], color="black", label="wind")
-plt.legend()
-plt.ylabel("m/s")
 plt.xlabel("day")
 plt.show()
