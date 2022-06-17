@@ -37,8 +37,16 @@ for a in range(1, 7):
           '最高气温', preds[a][1], '℃ ',
           '最低气温', preds[a][2], '℃ ',
           "降雨量", preds[a][3], "mm ",
-          "气压", preds[a][4], 'hPa ',
-          "风向", preds[a][5], '° ',)
+          '气压', preds[a][4], 'hPa ', end=''
+          )
+    if preds[a][5] <90:
+        print('东北风', preds[a][5], '° ')
+    elif preds[a][5] <180:
+        print('东南风', preds[a][5], '° ')
+    elif preds[a][5] <270:
+        print('西南风', preds[a][5], '° ')
+    elif preds[a][5] <360:
+        print('西北风', preds[a][5], '° ')
     all_ave_t.append(preds[a][0])
     all_high_t.append(preds[a][1])
     all_low_t.append(preds[a][2])
