@@ -8,6 +8,7 @@ from GetModel import GetModel
 import matplotlib.pyplot as plt
 
 
+
 # 训练并保存模型并返回MAE
 r = GetModel()
 print("MAE:", r[0])

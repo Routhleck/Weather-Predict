@@ -15,7 +15,7 @@ def a(t):
 
 
 # 功能: 写csv
-def write(years, b, c):
+def write(years, b, c, id):
     """
     :param years: [开始日期距离现在的年份, 结束日期距离现在的年份]
     :param b: [开始日期距离现在日期的天数, 结束日期距离现在日期的天数]
@@ -54,8 +54,6 @@ def write(years, b, c):
             else:
                 # 今年不是，去年或未来是，所以+1
                 week_pre += DT.timedelta(days=1)
-    # 城市id 广州59287 青岛 54857 北京54511
-    id = "54511"
     # 爬取数据链接
     url = "http://www.meteomanz.com/sy2?l=1&cou=2250&ind=" + id + "&d1=" + str(week_ago.day).zfill(2) + "&m1=" + str(
         week_ago.month).zfill(2) + "&y1=" + str(week_ago.year - years[0]) + "&d2=" + str(week_pre.day).zfill(

@@ -9,7 +9,7 @@ from ProcessData import ProcessData
 
 
 # 训练并保存模型
-def GetModel(a="Model.pkl"):
+def GetModel(city,a="Model.pkl"):
     """
     :param a: 模型文件名
     :return:
@@ -17,7 +17,7 @@ def GetModel(a="Model.pkl"):
         X_test: 预测数据集]
     """
     # 取到数据
-    [X_train, X_valid, y_train, y_valid, X_test] = ProcessData()
+    [X_train, X_valid, y_train, y_valid, X_test] = ProcessData(city)
     # 用XGB模型，不过用有bug
     # modelX = XGBRegressor(n_estimators=1000, learning_rate=0.05, random_state=0, n_jobs=4)
     # # model.fit(X_train_3, y_train_3)

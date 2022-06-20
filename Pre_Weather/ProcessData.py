@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 
 # 功能: 数据预处理
-def ProcessData():
+def ProcessData(city):
     """
     :return:
         [X_train X训练数据集,
@@ -23,9 +23,16 @@ def ProcessData():
     # 用近几年的数据做训练集
     # 如 [1,1], [20, 0]就是用2019年的今天的20天前到2019年的今天数据做训练集
     # 写入csv
-    write([1, 1], [15, 0], "weather_train_train.csv")
-    write([1, 1], [0, 15], "weather_train_valid.csv")
-    write([0, 0], [15, 0], "weather_test.csv")
+    # 城市id\n广州 59287|青岛 54857|北京 54511\n上海 58362|武汉 57494|重庆 57516\n乌鲁木齐 51463|太原 53772|漠河 50136
+    case = {'广州': 59287, '青岛': 54857, '北京': 54511, '上海': 58362, '武汉': 57494, '重庆': 57516, '乌鲁木齐': 51463,
+            '太原': 53772, '漠河': 50136}
+    print(city)
+    print(case[city])
+    #将id变为str
+    id = str(case[city])
+    write([1, 1], [15, 0], "weather_train_train.csv", id)
+    write([1, 1], [0, 15], "weather_train_valid.csv", id)
+    write([0, 0], [15, 0], "weather_test.csv", id)
     X_test = pd.read_csv("weather_test.csv", index_col="Time", parse_dates=True)
     # 读取测试集和验证集
     X = pd.read_csv("weather_train_train.csv", index_col="Time", parse_dates=True)
