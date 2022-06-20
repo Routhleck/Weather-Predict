@@ -42,23 +42,23 @@ def predict(city):
             )
         if preds[a][5] <90:
             print('东北风', round(preds[a][5], 2), '° ', end='')
-            all_wind.append('东北风' + str(round(preds[a][5], 2)))
+            all_wind.append(str('东北风' + (str(round(preds[a][5], 2))+'°')))
         elif preds[a][5] <180:
             print('东南风', round(preds[a][5], 2), '° ', end='')
-            all_wind.append('东北风' + str(round(preds[a][5], 2)))
+            all_wind.append(str('东南风' + (str(round(preds[a][5], 2))+'°')))
         elif preds[a][5] <270:
             print('西南风', round(preds[a][5], 2), '° ', end='')
-            all_wind.append('东北风' + str(round(preds[a][5], 2)))
+            all_wind.append(str('西南风' + (str(round(preds[a][5], 2))+'°')))
         elif preds[a][5] <360:
             print('西北风', round(preds[a][5], 2), '° ', end='')
-            all_wind.append('东北风' + str(round(preds[a][5], 2)))
+            all_wind.append(str('西北风' + (str(round(preds[a][5], 2))+'°')))
         print('风速', round(preds[a][6], 2), 'km/h',)
-        all_ave_t.append(round(preds[a][0], 2))
-        all_high_t.append(round(preds[a][1], 2))
-        all_low_t.append(round(preds[a][2], 2))
-        all_rainfall.append(round(preds[a][3], 2))
-        all_pressure.append(round(preds[a][4], 2))
-        all_windSpeed.append(round(preds[a][6], 2))
+        all_ave_t.append(str(str(round(preds[a][0], 2))+'℃'))
+        all_high_t.append(str(str(round(preds[a][1], 2))+'℃'))
+        all_low_t.append(str(str(round(preds[a][2], 2))+'℃'))
+        all_rainfall.append(str(str(round(preds[a][3], 2))+'mm'))
+        all_pressure.append(str(str(round(preds[a][4], 2))+'hPa'))
+        all_windSpeed.append(str(str(round(preds[a][6], 2))+'km/h'))
 
     time_list = []
     today = DT.datetime.now()
