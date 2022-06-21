@@ -31,9 +31,9 @@ def write(years, b, c, id):
     today = DT.datetime.today()
     # 闰年片段
     st = isleap(today.year)
-    # 取20天前日期
+    # 取15天前日期
     week_ago = (today - DT.timedelta(days=b[0])).date()
-    # 20天后
+    # 15天后
     week_pre = (today + DT.timedelta(days=b[1])).date()
     # 从二月到三月
     if week_ago.month + week_pre.month == 5:
