@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time: 2020/12/16
-# @Author: Eritque arcus
-# @File: Write.py
 from calendar import isleap
 import re
 from bs4 import BeautifulSoup

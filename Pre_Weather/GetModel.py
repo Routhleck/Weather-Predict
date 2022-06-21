@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time: 2020/12/16
-# @Author: Eritque arcus
-# @File: GetModel.py
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 from sklearn.metrics import mean_absolute_error
@@ -18,15 +14,6 @@ def GetModel(city,a="Model.pkl"):
     """
     # 取到数据
     [X_train, X_valid, y_train, y_valid, X_test] = ProcessData(city)
-    # 用XGB模型，不过用有bug
-    # modelX = XGBRegressor(n_estimators=1000, learning_rate=0.05, random_state=0, n_jobs=4)
-    # # model.fit(X_train_3, y_train_3)
-    # # model.fit(X_train_2, y_train_2)
-    # col = ["Ave_t", "Max_t", "Min_t", "Prec","SLpress", "Winddir", "Windsp", "Cloud"]
-    # modelX.fit(X_train, y_train,
-    #           early_stopping_rounds=5,
-    #           eval_set=[(X_valid, y_valid)],
-    #           verbose=False)
     # 随机树森林模型
     model = RandomForestRegressor(random_state=0, n_estimators=1001)
     # 训练模型

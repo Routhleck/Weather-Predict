@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time: 2020/12/16
-# @Author: Eritque arcus
-# @File: GetData.py
-# 功能: 爬取数据
 import urllib3
 
 

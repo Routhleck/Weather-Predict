@@ -1,11 +1,7 @@
-# -*- coding: utf-8 -*-
-# @Time: 2020/12/16
-# @Author: Eritque arcus
-# @File: Main.py
 import joblib
 import datetime as DT
 from GetModel import GetModel
-import matplotlib.pyplot as plt
+
 
 def predict(city):
     # 训练并保存模型并返回MAE
@@ -16,11 +12,6 @@ def predict(city):
 
     # 最终预测结果
     preds = model.predict(r[1])
-    # 反归一化或标准化，不过出bug了，不用
-    # for cols in range(0, len(preds)):
-    #     preds[cols] = scaler.inverse_transform(preds[cols])
-    # sns.lineplot(data=preds)
-    # plt.show()
     # 打印结果到控制台
     print("未来7天预测")
     all_ave_t = []
