@@ -47,7 +47,7 @@ class Ui_MainWindow(object):
         self.tableWidget.setGeometry(QtCore.QRect(50, 130, 811, 281))
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(8)
-        self.tableWidget.setRowCount(6)
+        self.tableWidget.setRowCount(7)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setVerticalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
@@ -60,6 +60,8 @@ class Ui_MainWindow(object):
         self.tableWidget.setVerticalHeaderItem(4, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setVerticalHeaderItem(5, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(6, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
@@ -136,7 +138,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "天气预测 by group 9"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.check_label.setText(_translate("MainWindow", "请选择查看天气的城市："))
         self.comboBox.setItemText(0, _translate("MainWindow", "广州"))
         self.comboBox.setItemText(1, _translate("MainWindow", "青岛"))
@@ -159,6 +161,8 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "5"))
         item = self.tableWidget.verticalHeaderItem(5)
         item.setText(_translate("MainWindow", "6"))
+        item = self.tableWidget.verticalHeaderItem(6)
+        item.setText(_translate("MainWindow", "7"))
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "日期"))
         item = self.tableWidget.horizontalHeaderItem(1)

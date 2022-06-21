@@ -12,6 +12,7 @@ def predict(city):
 
     # 最终预测结果
     preds = model.predict(r[1])
+    print(len(preds))
     # 打印结果到控制台
     print("未来6天预测")
     all_ave_t = []
@@ -53,7 +54,7 @@ def predict(city):
 
     time_list = []
     today = DT.datetime.now()
-    for a in range(1, 7):
+    for a in range(1, 8):
         time = (today + DT.timedelta(days=a)).date()
         #合并time.year, time.month, time.day
         time_list.append(str(time.year) + '-' + str(time.month) + '-' + str(time.day))

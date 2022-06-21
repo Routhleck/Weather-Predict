@@ -35,7 +35,7 @@ class mywindow(QMainWindow, ui.Ui_MainWindow):
         self.process_label.show()
         weatherInfo = Main_ui.predict(city)
         #将weatherInfo添加到tableWidget中
-        for i in range(0,6):
+        for i in range(0,7):
             self.tableWidget.setItem(i, 0, QtWidgets.QTableWidgetItem(str(weatherInfo["time"][i])))
             self.tableWidget.setItem(i, 1, QtWidgets.QTableWidgetItem(str(weatherInfo["ave_t"][i])))
             self.tableWidget.setItem(i, 2, QtWidgets.QTableWidgetItem(str(weatherInfo["high_t"][i])))
