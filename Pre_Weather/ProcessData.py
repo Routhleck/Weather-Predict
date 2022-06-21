@@ -34,7 +34,7 @@ def ProcessData(city):
     X = pd.read_csv("weather_train_train.csv", index_col="Time", parse_dates=True)
     y = pd.read_csv("weather_train_valid.csv", index_col="Time", parse_dates=True)
     
-    # 填充缺少的数值用方差
+    # 填充缺少的数值
     my_imputer = SimpleImputer()
     X_train, X_valid, y_train, y_valid = train_test_split(X, y, train_size=0.8, test_size=0.2, random_state=0)
     imputed_X_train = pd.DataFrame(my_imputer.fit_transform(X_train))

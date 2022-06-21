@@ -86,8 +86,7 @@ def write(years, b, c, id):
             else:
                 # 取每个元素的内容
                 text[i] = text[i].string
-            # 丢失数据都取2(简陋做法)
-            # 这么做 MAE=3.6021
+            # 丢失数据都取空
             text[i] = "" if text[i] == "-" else text[i]
             text[i] = "" if text[i] == "- " else text[i]
             text[i] = "" if text[i] == "Tr" else text[i]
