@@ -23,7 +23,7 @@ all_rainfall = []
 all_pressure = []
 all_wind = []
 all_windSpeed = []
-for a in range(1, 7):
+for a in range(1, 8):
     today = DT.datetime.now()
     time = (today + DT.timedelta(days=a)).date()
     print(time.year, '/', time.month, '/', time.day,

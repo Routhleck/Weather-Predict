@@ -63,9 +63,9 @@ class mywindow(QMainWindow, ui.Ui_MainWindow):
             ave_t = [float(i.strip("℃")) for i in weatherInfo["ave_t"]]
             high_t = [float(i.strip("℃")) for i in weatherInfo["high_t"]]
             low_t = [float(i.strip("℃")) for i in weatherInfo["low_t"]]
-            plt.plot(range(1, 7), ave_t, color="green", label="ave_t")
-            plt.plot(range(1, 7), high_t, color="red", label="high_t")
-            plt.plot(range(1, 7), low_t, color="blue", label="low_t")
+            plt.plot(range(1, 8), ave_t, color="green", label="ave_t")
+            plt.plot(range(1, 8), high_t, color="red", label="high_t")
+            plt.plot(range(1, 8), low_t, color="blue", label="low_t")
             plt.legend()  # 显示图例
             plt.ylabel("Temperature(°C)")
             plt.xlabel("day")
@@ -82,7 +82,7 @@ class mywindow(QMainWindow, ui.Ui_MainWindow):
         else:
             #将字符串去掉最后的字符并转化为float
             rainfall = [float(i.strip("mm")) for i in weatherInfo["rainfall"]]
-            plt.plot(range(1, 7), rainfall, color="black", label="rainfall")
+            plt.plot(range(1, 8), rainfall, color="black", label="rainfall")
             plt.legend()
             plt.ylabel("mm")
             plt.xlabel("day")
@@ -99,7 +99,7 @@ class mywindow(QMainWindow, ui.Ui_MainWindow):
         else:
             #将字符串去掉最后的字符并转化为float
             pressure = [float(i.strip("hPa")) for i in weatherInfo["pressure"]]
-            plt.plot(range(1, 7), pressure, color="black", label="pressure")
+            plt.plot(range(1, 8), pressure, color="black", label="pressure")
             plt.legend()
             plt.ylabel("hPa")
             plt.xlabel("day")
@@ -116,7 +116,7 @@ class mywindow(QMainWindow, ui.Ui_MainWindow):
         else:
             #将字符串去掉最后的字符并转化为float
             windSpeed = [float(i.strip("km/h")) for i in weatherInfo["windSpeed"]]
-            plt.plot(range(1, 7), windSpeed, color="black", label="wind")
+            plt.plot(range(1, 8), windSpeed, color="black", label="wind")
             plt.legend()
             plt.ylabel("m/s")
             plt.xlabel("day")

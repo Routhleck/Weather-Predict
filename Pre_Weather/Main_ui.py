@@ -13,7 +13,7 @@ def predict(city):
     # 最终预测结果
     preds = model.predict(r[1])
     # 打印结果到控制台
-    print("未来7天预测")
+    print("未来6天预测")
     all_ave_t = []
     all_high_t = []
     all_low_t = []
@@ -21,7 +21,7 @@ def predict(city):
     all_pressure = []
     all_wind = []
     all_windSpeed = []
-    for a in range(1, 7):
+    for a in range(1, 8):
         today = DT.datetime.now()
         time = (today + DT.timedelta(days=a)).date()
         print(time.year, '/', time.month, '/', time.day,
