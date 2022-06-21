@@ -124,6 +124,10 @@ class mywindow(QMainWindow, ui.Ui_MainWindow):
 
 
 if __name__ == "__main__":
+    # 适应高DPI设备
+    QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling)
+    # 适应Windows缩放
+    QtGui.QGuiApplication.setAttribute(QtCore.Qt.HighDpiScaleFactorRoundingPolicy.PassThrough)
     app = QApplication(sys.argv)
     myshow = mywindow()
     myshow.show()

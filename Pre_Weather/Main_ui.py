@@ -58,7 +58,6 @@ def predict(city):
         #合并time.year, time.month, time.day
         time_list.append(str(time.year) + '-' + str(time.month) + '-' + str(time.day))
 
-    print(all_ave_t)
     temp = {"time":time_list ,"ave_t": all_ave_t, "high_t": all_high_t, "low_t": all_low_t, "rainfall": all_rainfall, "pressure": all_pressure, "wind": all_wind, "windSpeed": all_windSpeed}
     return temp
     '''

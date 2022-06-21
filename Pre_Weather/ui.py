@@ -136,7 +136,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "天气预测 by group 9"))
         self.check_label.setText(_translate("MainWindow", "请选择查看天气的城市："))
         self.comboBox.setItemText(0, _translate("MainWindow", "广州"))
         self.comboBox.setItemText(1, _translate("MainWindow", "青岛"))

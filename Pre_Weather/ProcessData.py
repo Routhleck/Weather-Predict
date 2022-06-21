@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time: 2020/12/16
-# @Author: Eritque arcus
-# @File: ProcessData.py
 from Write import write
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -10,7 +6,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-# 功能: 数据预处理
+# 数据预处理
 def ProcessData(city):
     """
     :return:
@@ -21,7 +17,7 @@ def ProcessData(city):
         imputed_X_test 预测数据集]
     """
     # 用近几年的数据做训练集
-    # 如 [1,1], [20, 0]就是用2019年的今天的20天前到2019年的今天数据做训练集
+    # 如 [1,1], [20, 0]就是用2021年的今天的20天前到2021年的今天数据做训练集
     # 写入csv
     # 城市id\n广州 59287|青岛 54857|北京 54511\n上海 58362|武汉 57494|重庆 57516\n乌鲁木齐 51463|太原 53772|漠河 50136
     case = {'广州': 59287, '青岛': 54857, '北京': 54511, '上海': 58362, '武汉': 57494, '重庆': 57516, '乌鲁木齐': 51463,
