@@ -88,9 +88,9 @@ def write(years, b, c, id):
                 text[i] = text[i].string
             # 丢失数据都取2(简陋做法)
             # 这么做 MAE=3.6021
-            text[i] = "2" if text[i] == "-" else text[i]
-            text[i] = "2" if text[i] == "- " else text[i]
-            text[i] = "2" if text[i] == "Tr" else text[i]
+            text[i] = "" if text[i] == "-" else text[i]
+            text[i] = "" if text[i] == "- " else text[i]
+            text[i] = "" if text[i] == "Tr" else text[i]
         text = text[0:9]
         # ext += [str(int(negA)), str(int(negMax)), str(int(negMin))]
         # 4. 写入csv文件内容
