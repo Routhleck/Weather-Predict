@@ -26,3 +26,5 @@ def GetModel(city,a="Model.pkl"):
     joblib.dump(model, a)
     # 返回MAE
     return [score, X_test]
+
+
