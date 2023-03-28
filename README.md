@@ -39,3 +39,15 @@ RF不能给出一个连续的输出，而且随机森林不能做出超越训练
 之后通过ProcessData.py调用Write中的方法write进行数据的读取与csv文件的写入，并通过这些文件进行数据集的处理与划分。
 最后模型构建在GetModel.py中，使用随机森林模型，填入处理好的数据集，进行模型的训练与保存。
 之后通过main.py进行已经训练好的模型的调用与预测。
+
+# 4.结果与可视化
+
+
+
+![Figure_1](doc/img/Figure_1.png)
+
+![Figure_2](doc/img/Figure_2.png)
+
+![Figure_3](doc/img/Figure_3.png)
+
+![Figure_4](doc/img/Figure_4.png)
